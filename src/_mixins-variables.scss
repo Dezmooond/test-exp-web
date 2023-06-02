@@ -1,0 +1,47 @@
+$white: #FFFFFF;
+$orange: #FF7400;
+$brown: #D67E35;
+$black: #000000;
+
+$open-sans: 'Open Sans', sans-serif;
+$Tinos: 'Tinos', sans-serif;
+
+$fw-700: 700;
+$fw-600: 600;
+$fw-400: 400;
+
+$text-size-xl: 54px;
+$text-size-lg: 26px;
+$text-size-md: 20px;
+$text-size-sm: 16px;
+$text-size-xs: 14px;
+
+$line-size-sm: 27px;
+$line-size-xs: 22px;
+$line-size-xxs: 19px; 
+
+@mixin font-style ($font-family, $font-weight, $font-size, $line-height, $text-align, $color) {
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	text-align: $text-align;
+	color: $color;
+}
+
+%center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%flex-align-center {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-justify-center ($justify-content) {
+	display: flex;
+	justify-content: $justify-content;
+}

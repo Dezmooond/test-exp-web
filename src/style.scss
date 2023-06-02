@@ -1,0 +1,304 @@
+@import "./reset.scss";
+@import "./mixins-variables";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,600,700,);
+@import url(https://fonts.googleapis.com/css?family=Tinos:regular,700,);
+
+.hidden {
+	display: none;
+}
+
+.header {
+	background: url(./img/header-logo.png);
+	background-size: cover;
+	height: 100vh;
+}
+.container {
+	max-width: 1138px;
+	margin: 0 auto;
+}
+.header-line {
+	padding-top: 50px;
+	@extend %flex-align-center;
+}
+.header-logo {
+	margin-right: 268px;
+}
+.nav-item {
+	margin-right: 25px;
+	@include font-style($open-sans, $fw-700, $text-size-xs, $line-size-xxs, left, $white)
+}
+.nav-item:last-child {
+	padding-right: 35px;
+}
+.cart {
+	position: relative;
+	margin-right: 35px;
+	border-right: 1px solid $white;
+	height: 50px;
+	.cart-img {
+		top: 18px;
+		position: absolute;
+		right: 21px;
+	}
+}
+.phone {
+	margin-right: 50px;
+}
+.number {
+	@include font-style($open-sans, $fw-700, 18px, 25px, left, $white)
+}
+.number::before {
+	content: '';
+	background-image: url(./img/phone.svg);
+	width: 23px;
+	height: 23px;
+	display: inline-block;
+}
+.phone-text {
+	@include font-style($open-sans, $fw-400, $text-size-xs, $line-size-xxs, left, $white)
+}
+.header-btn {
+	padding: 14px 18px;
+	background: $orange;
+	@include font-style($open-sans, $fw-700, $text-size-xs, $line-size-xxs, left, $white)
+}
+
+.header-info {
+	margin-top: 205px;
+	.header-title {
+		@include font-style($Tinos, $fw-400, 50px, 57px, left, $brown);
+		span {
+			font-size: 80px;
+			line-height: 92px;
+		}
+	}
+	.header-subtitle {
+		margin-top: 12px;
+		margin-left: 100px;
+		@include font-style($open-sans, $fw-400, 18px, 25px, left, $white);
+		&::before {
+			content: url(./img/line.svg);
+		}
+		&::after {
+			content: url(./img/line.svg);
+	}
+	}
+	.view-btn {
+		margin-top: 21px;
+		margin-left: 184px;
+		padding: 14px 28px;
+		@extend %flex-align-center;
+		@include font-style($open-sans, $fw-700, $text-size-xs, $line-size-xxs, left, $white);
+		background: $orange;
+	}
+}
+.card-wrapper {
+	@include flex-justify-center(space-between);
+	flex-wrap: wrap;
+	max-width: 1199px;
+	margin: 0 auto;
+	margin-top: -100px;
+	.card {
+		width: 349px;
+		background: $white;
+		box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);;
+		.card-img {
+			margin-top: 40px;
+			margin-left: 130px;
+		}
+		.card-title {
+			margin-top: 17px;
+			@include font-style($Tinos, $fw-400, $text-size-lg, 30px, center, #2C2C2C);
+		}
+		.card-parag {
+			margin-top: 20px;
+			@include font-style($Tinos, $fw-400, $text-size-lg, 30px, center, #656363);
+		}
+	 }
+ }
+.history {
+	margin-top: 166px;
+	background: url(./img/images.png);
+	background-repeat: no-repeat;
+	background-position-x: 870px;
+	.history-info {
+		width: 450px;
+		.history-title {
+			@include font-style($Tinos, $fw-400, $text-size-xl, 62px, center, $black)
+		 }
+		.history-subtitle {
+			margin-top: 21px;
+			@include font-style($open-sans, $fw-400, $text-size-sm, $line-size-xs, center, #656363);
+		}
+	}
+	ul {
+		display: flex;
+		margin-left: 75px;
+		margin-top: 60px;
+		li {
+			margin-right: 20px;
+		}
+		.number {
+			@include font-style($open-sans, $fw-400, 40px, $text-size-xl, center, #BC9060);
+			display: flex;
+		}
+		.caption {
+			@include font-style($open-sans, $fw-400, $text-size-md, $line-size-sm, left, $black);
+			@include flex-justify-center(center);
+		}
+	}
+}
+.promotion {
+	margin-top: 122px;
+	background: url(./img/promotion-fon.jpg);
+	background-size: cover;
+	min-height: 357px;
+	.promotion-content {
+		padding-top: 80px;
+		@include flex-justify-center(space-between);
+			.promotion-title {
+			padding-bottom: 30px;
+			@include font-style($Tinos, $fw-400, 52px, 60px, left, $brown);
+		}
+		.promotion-subtitle {
+			@include font-style($open-sans, $fw-700, 24px, 33px, left, $white);
+		}
+		.promotion-btn {
+			align-self: center;
+			padding: 14px 18px;
+			background: $orange;
+			@include font-style($open-sans, $fw-700, $text-size-xs, $line-size-xxs, left, $white);
+		}
+	}
+}
+.menu {
+	margin-top: 150px;
+	background: url(./img/menu-fon.jpg);
+	background-size: cover;
+	height: 1038px;
+	.menu-title {
+		padding-top: 100px;
+		@include font-style($Tinos, $fw-400, $text-size-xl, 62px, left, $white);
+		text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+		@include flex-justify-center(center)
+	}
+	.menu-card-wrapper {
+		margin-top: 138px;
+		display: flex;
+		.left-trigger {
+			padding-top: 230px;
+			margin-right: 50px;
+		}
+		.right-trigger {
+			padding-top: 230px;
+			margin-left: 20px;
+		}
+		.menu-card {
+			margin-right: 30px;
+			width: 359px;
+			background: $white;
+			.image-wrapper {
+				margin-top: 80px;
+				@extend %center
+			}
+			.text-wrapper {
+				margin-top: 22px;
+				@extend %flex-align-center;
+				flex-direction: column;
+				flex-wrap: wrap;
+				.menu-card-title {
+					@include font-style($Tinos, $fw-400, $text-size-lg, 30px, left, $black);
+				}
+				.menu-description {
+					margin-top: 17px;
+					@include font-style($open-sans, $fw-400, $text-size-sm, $line-size-xs, center, $black);
+				}
+				.menu-button {
+					margin-top: 20px;
+					margin-bottom: 30px;
+					@include font-style($open-sans, $fw-700, $text-size-sm, $line-size-xs, center, $white);
+					padding: 14px 68px;
+					background: $brown;
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+				}
+			}
+		}
+	}
+}
+.image {
+	border-radius: 50%;
+	width: 200px;
+}
+.comment {
+	background: #E6E5E5;
+	.feedback {
+		padding-top: 104px;
+		.feedback-subtitle {
+			@include font-style($open-sans, $fw-400, $text-size-md, $line-size-sm, center, $black);
+			font-style: italic;
+		}
+		.client-foto {
+			padding-top: 30px;
+			@extend %center;
+		}
+		.client-text {
+			@extend %center;
+			flex-direction: column;
+			.client {
+				padding-top: 16px;
+				@include font-style($open-sans, $fw-600, $text-size-md, $line-size-sm, center, $black);
+			}
+			.client-name {
+				padding-top: 9px;
+				@include font-style($open-sans, $fw-400, $text-size-md, $line-size-sm, center, $black);
+			}
+		}
+	}
+}
+
+.modal {
+	box-sizing: unset;
+	padding: 20px;
+	position: fixed;
+	background: $white;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5)
+}
+
+.inner-modal {
+	position: absolute;
+	padding: 20px;
+  	border-radius: 8px;
+  	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	background-color: #fff; 
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	.modal-title {
+		margin-top: 15%;
+		@include font-style($open-sans, $fw-700, $text-size-md, 25px, center, $orange);
+	}
+	input {
+		margin-top: 10%;
+		border: 1px solid $orange;
+		padding: 10px 10px;
+		box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+	}
+	.modal-btn {
+		margin-top: 10%;
+		padding: 15px 15px;
+		@include font-style($open-sans, $fw-700, $text-size-sm, $line-size-xxs, center, $white);
+		background: $orange;
+	}
+}
+
+
+
+ 
